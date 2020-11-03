@@ -19,4 +19,6 @@ const regex = /^chore\(release\): (0|[1-9]\d*)\.(0|[1-9]\d*)\.(0|[1-9]\d*)(?:-((
 const commitMessage = process.argv[2]; // This is the commit message
 if (commitMessage != null && regex.test(commitMessage)) {
   exec('yarn lerna:publish').stderr.pipe(process.stderr);
+} else {
+  console.log(`an error occured and a package was not published for${commitMessage}`);
 }
