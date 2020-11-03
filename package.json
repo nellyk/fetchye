@@ -1,5 +1,5 @@
 {
-  "name": "fetchye-project",
+  "name": "lerna-yarn-fetchye-test",
   "private": true,
   "workspaces": [
     "packages/*"
